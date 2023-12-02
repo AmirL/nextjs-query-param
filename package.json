@@ -1,0 +1,39 @@
+{
+  "name": "nextjs-query-param",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmirL/nextjs-query-param.git"
+  },
+  "keywords": [
+    "NextJs",
+    "useQueryParam",
+    "State",
+    "QueryState"
+  ],
+  "author": "Amir Latypov (AmirL)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmirL/nextjs-query-param/issues"
+  },
+  "homepage": "https://github.com/AmirL/nextjs-query-param#readme",
+  "dependencies": {
+    "typescript": "^5.3.2"
+  },
+  "peerDependencies": {
+    "next": "^13.4.19",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.41"
+  }
+}
