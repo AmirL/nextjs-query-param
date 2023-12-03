@@ -29,13 +29,14 @@ import { useQueryParam } from 'nextjs-query-param';
 import { z } from 'zod';
 
 // Example: Syncing state with Zod validation
-export const SortColumnSchema = z.enum(['title', 'renewalDate', 'followUpDate', 'userLicensesLeft']).catch('title');
+export const SortColumnSchema = z.enum(['title', 'date', 'author']).catch('title');
 export const SortDirectionSchema = z.enum(['asc', 'desc']).catch('asc');
-export type SortColumn = z.infer<typeof SortColumnSchema>;
-export type SortDirection = z.infer<typeof SortDirectionSchema>;
 
 const MyComponent = () => {
+// The sort column infers its type from the result type of SortColumnSchema: 'title' | 'date' | 'author'.
   const [sortColumn, setSortColumn] = useQueryParam('sortColumn', (value) => SortColumnSchema.parse(value));
+
+  // The sort direction infers its type from the result type of SortDirectionSchema: 'asc' | 'desc'.
   const [sortDirection, setSortDirection] = useQueryParam('sortDirection', (value) => SortDirectionSchema.parse(value));
 
   // Change only one value
